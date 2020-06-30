@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Detran</title>
+     <style>
+         body {  
+             font: normal 10pt Arial
+         }
+     </style>
+        
+ </head>
+ <body>
+     <h1>Sistema de Multas aula 11</h1>
+     Velocidade do carro <input type="number" name="txtvelocidade" id="txtvelocidade"> Km/h 
+     <input type="button" value="Verificar" onclick="caucular()">    
+     <div id = "resultado">
+    
+    </div>
+<script>
+    //var txtvelocidade faz ligação com name="txtvelocidade"
+
+    function caucular() {
+      var txtvelocidade = window.document.getElementById ('txtvelocidade') // Posso usar window.document.querySelector('input#txtv')
+        var resultado = window.document.querySelector ('div#resultado')
+        var vel = Number (txtvelocidade.value) //Conversão de string para number
+        resultado.innerHTML = `<p>Sua Velocidade atual é de ${vel} Km/h</p>`
+        if (vel > 60) {
+            resultado.innerHTML += `<p> Voce esta Multado por excesso de velocidade</p>`
+        }
+        resultado.innerHTML += `<p>Use o cinto de segurança!</p>`
+
+    }
+
+</script>
+ </body>
+ </html>
