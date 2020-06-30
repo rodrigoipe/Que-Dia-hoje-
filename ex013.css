@@ -24,6 +24,7 @@ input[type=button]{
     
 }
 .res {
+    margin-top: 20px;
     font: normal 30pt Arial;
-    text-align: center;   
+    text-align: center; 
 }
