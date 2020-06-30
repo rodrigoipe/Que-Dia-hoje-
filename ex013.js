@@ -8,26 +8,68 @@ function verificar() {
         
     switch (diaSem) {
         
-    case 0:
-        resp.innerText = (`Domingo, ${hora} horas`)    
+    case 0: // Caso o dia da semana seja X, e se a hora for X, escreva o dia, a hora e dê bom dia, boa tarde ou boa noite.
+        if (hora <= 12) {
+            resp.innerText = (`Domingo,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Domingo,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Domingo,  ${hora} horas. Boa noite!`)
+        }          
         break;
     case 1:
-        resp.innerText = (`Segunda-feira,  ${hora} horas`)
+        if (hora <= 12) {
+            resp.innerText = (`Segunda-feira,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Segunda-feira,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Segunda-feira,  ${hora} horas. Boa noite!`)
+        }
             break;
         case 2:
-        resp.innerText = (`Terça-feria,  ${hora} horas`)
+        if (hora <= 12) {
+            resp.innerText = (`Terça-feira,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Terça-feira,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Terça-feira,  ${hora} horas. Boa noite`)
+        }
         break;
     case 3:
-        resp.innerText = (`Quarta-feira, ${hora} horas`)
+        if (hora <= 12) {
+            resp.innerText = (`Quarta-feira,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Quarta-feira,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Quarta-feira,  ${hora} horas. Boa noite`)
+        }
         break;
     case 4:
-        resp.innerText = (`Quinta-feira, ${hora} horas`)
+        if (hora <= 12) {
+            resp.innerText = (`Quinta-feira,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Quinta-feira,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Quinta-feira,  ${hora} horas. Boa noite!`)
+        }
         break;
     case 5:
-        resp.innerText = (`Sexta-feira , ${hora} horas`)
+        if (hora <= 12) {
+            resp.innerText = (`Sexta-feira,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Sexta-feira,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Sexta-feira,  ${hora} horas. Boa noite!`)
+        }
         break;
-    case 3:
-        resp.innerText = (`Sabado, ${hora} horas`)
+    case 6:
+        if (hora <= 12) {
+            resp.innerText = (`Sábado,  ${hora} horas. Bom dia!`)
+        } else if (hora <= 18) {
+            resp.innerText = (`Sábado,  ${hora} horas. Boa tarde!`)
+        } else {
+            resp.innerText = (`Sábado,  ${hora} horas. Boa noite!`)
+        }
         break;            
     }
 
