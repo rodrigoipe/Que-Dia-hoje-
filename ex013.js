@@ -2,73 +2,77 @@
 function verificar() {
     var agora = new Date()
     var hora = agora.getHours()
+    var min = agora.getMinutes()
+    var dia  = agora.getDate() 
     var diaSem = agora.getDay()
+    var mes  = agora.getMonth()          // 0-11 (zero=janeiro)
+    var ano  = agora.getFullYear()       
     var resp = window.document.querySelector('div.res')
 
         
     switch (diaSem) {
         
-    case 0: // Caso o dia da semana seja X, e se a hora for X, escreva o dia, a hora e dê bom dia, boa tarde ou boa noite.
-        if (hora <= 12) {
-            resp.innerText = (`Domingo,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Domingo,  ${hora} horas. Boa tarde!`)
+    case 0:
+        if (hora <= 11) {
+            resp.innerText = (`Domingo, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Domingo, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Domingo,  ${hora} horas. Boa noite!`)
+            resp.innerText = (`Domingo, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite!`)
         }          
         break;
     case 1:
-        if (hora <= 12) {
-            resp.innerText = (`Segunda-feira,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Segunda-feira,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Segunda-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Segunda-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Segunda-feira,  ${hora} horas. Boa noite!`)
+            resp.innerText = (`Segunda-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite!`)
         }
             break;
         case 2:
-        if (hora <= 12) {
-            resp.innerText = (`Terça-feira,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Terça-feira,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Terça-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} hs. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Terça-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} hs. Boa tarde!`)
         } else {
-            resp.innerText = (`Terça-feira,  ${hora} horas. Boa noite`)
+            resp.innerText = (`Terça-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} hs. Boa noite`)
         }
         break;
     case 3:
-        if (hora <= 12) {
-            resp.innerText = (`Quarta-feira,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Quarta-feira,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Quarta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Quarta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Quarta-feira,  ${hora} horas. Boa noite`)
+            resp.innerText = (`Quarta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite`)
         }
         break;
     case 4:
-        if (hora <= 12) {
-            resp.innerText = (`Quinta-feira,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Quinta-feira,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Quinta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Quinta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Quinta-feira,  ${hora} horas. Boa noite!`)
+            resp.innerText = (`Quinta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite!`)
         }
         break;
     case 5:
-        if (hora <= 12) {
-            resp.innerText = (`Sexta-feira,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Sexta-feira,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Sexta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Sexta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Sexta-feira,  ${hora} horas. Boa noite!`)
+            resp.innerText = (`Sexta-feira, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite!`)
         }
         break;
     case 6:
-        if (hora <= 12) {
-            resp.innerText = (`Sábado,  ${hora} horas. Bom dia!`)
-        } else if (hora <= 18) {
-            resp.innerText = (`Sábado,  ${hora} horas. Boa tarde!`)
+        if (hora <= 11) {
+            resp.innerText = (`Sábado, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Bom dia!`)
+        } else if (hora <= 17) {
+            resp.innerText = (`Sábado, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa tarde!`)
         } else {
-            resp.innerText = (`Sábado,  ${hora} horas. Boa noite!`)
+            resp.innerText = (`Sábado, dia ${dia}/${mes + 1}/${ano}, ${hora + ':' + min} horas. Boa noite!`)
         }
         break;            
     }
